@@ -32,7 +32,7 @@
   @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    @numsf    g    h    @numsj    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lsft z    x    c    @symv    b    @symn    m    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
@@ -54,20 +54,26 @@
 ;; Aliases are referred to by `@<alias_name>`.
 (defalias
   ;; tap: backtick (grave), hold: toggle layer-switching layer while held
-  grl (tap-hold 200 200 grv (layer-toggle layers))
+  grl (tap-hold 400 400 grv (layer-toggle layers))
 
   ;; layer-switch changes the base layer.
   dvk (layer-switch dvorak)
   qwr (layer-switch qwerty)
 
   ;; tap for capslk, hold for lctl
-  cap (tap-hold 200 200 caps lctl)
+  cap (tap-hold 400 400 caps lctl)
 
   ;; tap for f, hold for numbers layers
-  numsf (tap-hold 200 200 f (layer-toggle numbers))
+  numsf (tap-hold 400 400 f (layer-toggle numbers))
 
   ;; tap for j, hold for numbers layers
-  numsj (tap-hold 200 200 j (layer-toggle numbers))
+  numsj (tap-hold 400 400 j (layer-toggle numbers))
+
+  ;; tap for v, hold for symbols layers
+  symv (tap-hold 400 400 v (layer-toggle symbols))
+
+  ;; tap for n, hold for symbols layers
+  symn (tap-hold 400 400 n (layer-toggle symbols))
 )
 
 ;; The `lrld` action stands for "live reload". This will re-parse everything
@@ -91,6 +97,14 @@
   _ _    _    _    _    _    _    _    _    _    _    _    _    _
   _  _    _    _    _    _    _    _    _    _    _    _    _    _
   _ 1    2    3    4    5    6    7    8    9    0    _    _
+  _ _    _    _    _    _    _    _    _    _    _    _
+  _ _ _           _            _ _ _
+)
+
+(deflayer symbols
+  _ _    _    _    _    _    _    _    _    _    _    _    _    _
+  _  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _  S-1    S-2    S-3    S-4    S-5    S-6    S-7    S-8    S-9    S-0    _    _
   _ _    _    _    _    _    _    _    _    _    _    _
   _ _ _           _            _ _ _
 )

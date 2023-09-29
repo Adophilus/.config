@@ -14,6 +14,7 @@ Set-Alias -Name python3 -Value python
 
 . ~\.config\powershell\chocolatey\init.ps1
 . ~\.config\powershell\deno\init.ps1
+. ~\.config\powershell\docker\init.ps1
 . ~\.config\powershell\vim\init.ps1
 . ~\.config\powershell\hey\init.ps1
 . ~\.config\powershell\kanata\init.ps1

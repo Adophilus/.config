@@ -3,6 +3,10 @@ if ($confirmation -eq 'y')
 {
   Write-Host "Starting up komorebi..."
   Komorebi-Start
+
+  Write-Host "Starting up yasb..."
   Yasb-Start
+
+  Write-Host "Starting up kanata..."
   Kanata-Start
 }
